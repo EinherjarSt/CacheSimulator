@@ -4,6 +4,7 @@ public class CacheLine {
 	private boolean dirty;
 	private long tag;
 	private boolean valid;
+	private int countUse;
 	
 	public CacheLine() {
 		tag = -1;
@@ -38,6 +39,10 @@ public class CacheLine {
 
 	public void setTag(long tag) {
 		this.tag = tag;
+	}
+	
+	public int getCountUse() {
+		return countUse;
 	}
 	
 }

@@ -22,30 +22,30 @@ public class Main {
 		int cacheSize = 128;
 		boolean wt = false; // true Write-Through: false Write Back
 		boolean fa = false; // FullAssociative?
-		int sa = 0; // 0 no es set associative: cualquier otro si lo es
+		int sa = 1; // tamaño de conjunto
 		boolean wna = false; // true Write-No-Allocate : false Write-Allocate
 		boolean split = false; // cache split?
 		String fileDir = "";  
 		for(int i = 0; i < args.length; i++) {
-			if (args.equals("-bs")) {
+			if (args[i].equals("-bs")) {
 				blockSize = Integer.valueOf(args [++i]);
 			}
-			else if (args.equals("-cs")) {
+			else if (args[i].equals("-cs")) {
 				cacheSize = Integer.valueOf(args [++i]);
 			}
-			else if (args.equals("-wt")) {
+			else if (args[i].equals("-wt")) {
 				wt = true;
 			}
-			else if (args.equals("-fa")) {
+			else if (args[i].equals("-fa")) {
 				fa = true;
 			}
-			else if (args.equals("-sa")) {
+			else if (args[i].equals("-sa")) {
 				sa = Integer.valueOf(args [++i]);
 			}
-			else if (args.equals("-wna")) {
+			else if (args[i].equals("-wna")) {
 				wna = true;
 			}
-			else if (args.equals("-split")) {
+			else if (args[i].equals("-split")) {
 				split = true;
 			}
 			else {
@@ -83,6 +83,7 @@ public class Main {
 						//1 Direccion
 						String[] token = line.split(" ");
 						long address = Binary.valuesOf(token[1], 16);
+						System.out.println(token[0] + " : " + Binary.binaryRepresentation(address));
 						/* 0 denota leer dato, 
 						 * 1 denota escribir dato, y 
 						 * 2 denota leer instrucción

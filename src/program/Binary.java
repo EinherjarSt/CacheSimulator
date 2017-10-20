@@ -21,7 +21,7 @@ public class Binary {
 		return string;
 	}
 	
-	public static String toBinaryString(long value){
+	private static String toBinaryString(long value){
 		String s = "";
 		for(int i= 31; i >= 0; i--){
 			if ((value & (1 << i)) != 0) {
