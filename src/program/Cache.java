@@ -40,16 +40,28 @@ public class Cache {
 	}
 	
 	public void writeData(long address){
+		Stadistic.nRefDatas++;
 		long tag = getTag(address);
+		CacheSet cacheSet;
 		if (!containBlock(address)) {
 			Stadistic.nMissDates++;
+			if(wna) {
+				cacheSet = getCacheSet(address);
+				if(cacheSet != null) {
+					if(cacheSet.isSetFull()) Stadistic.nWordCopytoRam++;
+					return; //ya escribi en ram asi que no tengo xq continuar
+				}
+			}
 			loadBlock(address);
 		}
-		CacheSet cacheSet = this.getCacheSet(address);
+		cacheSet = this.getCacheSet(address);
 		cacheSet.writeData(tag);
+		//Si esta activo write no allocate escribe tambien en ram
+		if(wt) Stadistic.nWordCopytoRam++;
 	}
 	
 	public void readData(long address){
+		Stadistic.nRefDatas++;
 		long tag = getTag(address);
 		if (!containBlock(address)) {
 			Stadistic.nMissDates++;
@@ -60,6 +72,8 @@ public class Cache {
 	}
 	
 	public void readIntruction(long address) {
+		Stadistic.nRefIntruct++;
+
 		long tag = getTag(address);
 		if (!containBlock(address)) {
 			Stadistic.nMissIntruction++;
@@ -75,7 +89,7 @@ public class Cache {
 		CacheSet cacheSet;
 		
 		if (!this.sets.containsKey(setAddress)) {
-			cacheSet = new CacheSet(sizeSet, nBitOffset);
+			cacheSet = new CacheSet(sizeSet, nBitOffset, wt, wna);
 			this.sets.put(setAddress, cacheSet);
 		} 
 		cacheSet = this.getCacheSet(address);

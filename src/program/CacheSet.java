@@ -7,10 +7,18 @@ public class CacheSet {
 	private HashMap<Long, CacheLine> lines;
 	private int setSize;
 	private int nBitOffset;
+	private boolean wna;
+	private boolean wt;
 	
 	public void writeData(long tag) {
-		CacheLine cacheLine = this.lines.get(tag); 
-		cacheLine.setDirty(true);
+		CacheLine cacheLine = this.lines.get(tag);
+		
+		/*si esta activo write write throught no se activa el dirty bit 
+		 *porque ya se actualiza la ram tambien.
+		 */
+		if(!wt) { 
+			cacheLine.setDirty(true);
+		}
 		incrementCountLine();
 		cacheLine.resetCount();
 
@@ -34,10 +42,12 @@ public class CacheSet {
 
 	}
 
-	public CacheSet(int setSize, int nBitOffset) {
+	public CacheSet(int setSize, int nBitOffset, boolean wt, boolean wna) {
 		this.lines = new HashMap<Long, CacheLine>();
 		this.setSize = setSize;
 		this.nBitOffset = nBitOffset;
+		this.wt = wt;//write throught
+		this.wna = wna;//write no allocate
 	}
 	
 	public void load (long tag) {
@@ -82,5 +92,9 @@ public class CacheSet {
 		this.lines.forEach((key, cacheline) -> {
 			cacheline.incrementCount();
 		});
+	}
+	
+	public boolean isSetFull() {
+		return this.lines.size() == this.setSize;
 	}
 }
