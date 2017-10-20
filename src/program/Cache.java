@@ -48,7 +48,7 @@ public class Cache {
 			if(wna) {
 				cacheSet = getCacheSet(address);
 				if(cacheSet != null) {
-					if(cacheSet.isSetFull()) Stadistic.nWordCopytoRam++;
+					if(cacheSet.isSetFull()) Stadistic.nWordCopytoRam+= blockSize;
 					return; //ya escribi en ram asi que no tengo xq continuar
 				}
 			}
@@ -57,7 +57,7 @@ public class Cache {
 		cacheSet = this.getCacheSet(address);
 		cacheSet.writeData(tag);
 		//Si esta activo write no allocate escribe tambien en ram
-		if(wt) Stadistic.nWordCopytoRam++;
+		if(wt) Stadistic.nWordCopytoRam+= blockSize;
 	}
 	
 	public void readData(long address){
@@ -89,7 +89,7 @@ public class Cache {
 		CacheSet cacheSet;
 		
 		if (!this.sets.containsKey(setAddress)) {
-			cacheSet = new CacheSet(sizeSet, nBitOffset, wt, wna);
+			cacheSet = new CacheSet(sizeSet, blockSize, nBitOffset, wt, wna);
 			this.sets.put(setAddress, cacheSet);
 		} 
 		cacheSet = this.getCacheSet(address);
