@@ -61,7 +61,7 @@ public class Cache {
 	
 	public void readIntruction(long address) {
 		long tag = getTag(address);
-		if (containBlock(address)) {
+		if (!containBlock(address)) {
 			Stadistic.nMissIntruction++;
 			loadBlock(address);
 		}
@@ -126,7 +126,7 @@ public class Cache {
 	}
 	
 	//Main de prueba local
-	public static void main(String[] args) {
+	private static void main(String[] args) {
 		int blockSize = 16; 
 		int cacheSize = 512;
 		boolean wt = false; // true Write-Through: false Write Back

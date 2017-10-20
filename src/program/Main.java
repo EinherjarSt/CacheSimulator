@@ -52,6 +52,7 @@ public class Main {
 				fileDir = args[i];
 			}
 		}
+		if (fa) sa = cacheSize; //Todas las lineas en un conjunto
 			printInfoCache(blockSize, cacheSize, wt, fa, sa, wna, split, fileDir);
 			Cache cache = new Cache(blockSize, cacheSize, wt, fa, sa, wna, split);
 			trace(fileDir, cache);

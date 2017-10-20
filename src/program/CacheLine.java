@@ -44,5 +44,14 @@ public class CacheLine {
 	public int getCountUse() {
 		return countUse;
 	}
+
+	public void incrementCount() {
+		this.countUse++;
+	}
+	
+	public void resetCount()
+	{
+		this.countUse = 0;
+	}
 	
 }

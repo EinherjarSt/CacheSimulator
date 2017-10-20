@@ -20,7 +20,6 @@ public class Stadistic {
 	public static void printStadistic() {
 		System.out.println("Numero de referencias a instrucciones: " + nRefIntruct);
 		System.out.println("Numero de referencias a datos: " + nRefDatas);
-		System.out.println("Numero de referencias a instrucciones: " + nRefIntruct);
 		System.out.println("Numero de faltas a instrucciones: " + nMissIntruction);
 		System.out.println("Numero de faltas a datos: " + nMissDates);
 		System.out.println("Numero de palabras copiadas desde RAM: " + nWordCopyFromRam);

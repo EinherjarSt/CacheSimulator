@@ -1,11 +1,7 @@
 package program;
 
-import java.awt.RenderingHints.Key;
 import java.util.Collection;
 import java.util.HashMap;
-
-import javax.swing.text.html.HTML.Tag;
-import javax.swing.text.html.HTMLDocument.HTMLReader.IsindexAction;
 
 public class CacheSet {
 	private HashMap<Long, CacheLine> lines;
@@ -13,17 +9,29 @@ public class CacheSet {
 	private int nBitOffset;
 	
 	public void writeData(long tag) {
-		this.lines.get(tag).setDirty(true);
-		Stadistic.nRefDatas++;
+		CacheLine cacheLine = this.lines.get(tag); 
+		cacheLine.setDirty(true);
+		incrementCountLine();
+		cacheLine.resetCount();
 
+		Stadistic.nRefDatas++;
+		
 	}
 	
 	public void readData(long tag) {
+		CacheLine cacheLine = this.lines.get(tag); 
+		incrementCountLine();
+		cacheLine.resetCount();
+		
 		Stadistic.nRefDatas++;
 	}
 	
 	public void readIntruction(long tag) {
+		CacheLine cacheLine = this.lines.get(tag); 
+		incrementCountLine();
+		cacheLine.resetCount();
 		Stadistic.nRefIntruct++;
+
 	}
 
 	public CacheSet(int setSize, int nBitOffset) {
@@ -41,13 +49,14 @@ public class CacheSet {
 		cacheLine.setValid(true);
 		cacheLine.setTag(tag);
 		this.lines.put(tag, cacheLine);
+		
 		Stadistic.nWordCopyFromRam++;
 	}
 	
 	public void deleteLeastRecently () {
 		Collection<CacheLine> cacheLines = this.lines.values();
-		long tag = 0;
-		int mayor = 0;
+		long tag = -1;
+		int mayor = -1; // ya que el el tag no sera negativo se usa como bandera para comparar el mayor elemento
 		for (CacheLine cacheLine : cacheLines) {
 			if (cacheLine.getCountUse() > mayor) {
 				mayor = cacheLine.getCountUse();
@@ -67,5 +76,11 @@ public class CacheSet {
 	
 	public CacheLine getCacheLine(long tag) {
 		return this.lines.get(tag);
+	}
+	
+	private void incrementCountLine() {
+		this.lines.forEach((key, cacheline) -> {
+			cacheline.incrementCount();
+		});
 	}
 }
