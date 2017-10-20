@@ -45,7 +45,7 @@ public class Cache {
 			Stadistic.nMissDates++;
 			loadBlock(address);
 		}
-		CacheSet cacheSet = this.getCacheSet(tag);
+		CacheSet cacheSet = this.getCacheSet(address);
 		cacheSet.writeData(tag);
 	}
 	
@@ -149,5 +149,12 @@ public class Cache {
 		System.out.println("Tag: " + getTag(address) + " bit : "+ Binary.binaryRepresentation(getTag(address)));
 		System.out.println("set: " + getSet(address) + " bit : "+ Binary.binaryRepresentation(getSet(address)));
 		System.out.println("offset: " + getOffset(address) + " bit : "+ Binary.binaryRepresentation(getOffset(address)));
+	}
+	
+	public String formatAddress(String binarySequence) {
+		String s1 = binarySequence.substring(0, nBitTag+6);
+		String s2 = binarySequence.substring(nBitTag+6, nBitTag+nBitSet+6);
+		String s3 = binarySequence.substring(nBitTag+nBitSet+6, binarySequence.length());
+		return s1 + " | " + s2 + " | " + s3;
 	}
 }

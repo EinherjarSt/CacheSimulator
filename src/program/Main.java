@@ -84,7 +84,7 @@ public class Main {
 						//1 Direccion
 						String[] token = line.split(" ");
 						long address = Binary.valuesOf(token[1], 16);
-						System.out.println(token[0] + " : " + Binary.binaryRepresentation(address));
+						System.out.println(token[0] + " : " + cache.formatAddress(Binary.binaryRepresentation(address)));
 						/* 0 denota leer dato, 
 						 * 1 denota escribir dato, y 
 						 * 2 denota leer instrucción
