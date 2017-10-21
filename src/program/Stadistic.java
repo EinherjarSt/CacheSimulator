@@ -24,6 +24,10 @@ public class Stadistic {
 		System.out.println("Numero de faltas a datos: " + nMissDates);
 		System.out.println("Numero de palabras copiadas desde RAM: " + nWordCopyFromRam);
 		System.out.println("Numero de palabras copiadas a RAM: " + nWordCopytoRam);
+		double missIntruction = ((double) nMissIntruction/nRefIntruct) * 100;
+		double missDate = ((double) nMissDates/nRefDatas) * 100;
+		System.out.printf("miss instruction rate: %.3f%% | hit rate : %.3f%% \n", missIntruction, 100-missIntruction);
+		System.out.printf("miss data rate: %.3f%% | hit rate : %.3f%%\n", missDate, 100-missDate);
 	}
 }
 

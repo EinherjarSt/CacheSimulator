@@ -182,11 +182,11 @@ public class Cache {
 	 */
 	public long passToIntructZone(long address) {
 		String representation = Binary.toBinaryString(address);
-		if (!representation.subSequence(nBitTag+1, nBitTag+2).equals("0")) {
+		if (!representation.subSequence(nBitTag, nBitTag+1).equals("0")) {
 			long setAddress = getSet(address);
 			int exponent = nBitSet;
 			setAddress = (long) (setAddress + Math.pow(2, exponent-1) - Math.pow(2, exponent));
-			String newRepresentation = representation.substring(0, nBitTag) + "0"+ Long.toBinaryString(setAddress) + representation.substring(nBitTag+nBitSet,representation.length());
+			String newRepresentation = representation.substring(0, nBitTag) + "0" + Long.toBinaryString(setAddress) + representation.substring(nBitTag+nBitSet,representation.length());
 			address = Binary.valuesOf(newRepresentation);
 		}
 		return address;
@@ -199,7 +199,7 @@ public class Cache {
 	 */
 	public long passToDataZone(long address) {
 		String representation = Binary.toBinaryString(address);
-		if (!representation.subSequence(nBitTag+1, nBitTag+2).equals("1")) {
+		if (!representation.subSequence(nBitTag, nBitTag+1).equals("1")) {
 			long setAddress = getSet(address);
 			int exponent = nBitSet;
 			setAddress = (long) (setAddress + Math.pow(2, exponent-1));

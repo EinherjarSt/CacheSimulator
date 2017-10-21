@@ -1,0 +1,613 @@
+/Users/Gabriel/Eclipse/Java/CacheSimulator
+spice.trace ----------------------------------------------------------------- -e
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 1
+wna = false
+split = false
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 497289
+Numero de faltas a datos: 166353
+Numero de palabras copiadas desde RAM: 2654568
+Numero de palabras copiadas a RAM: 258748
+miss instruction rate: 63,530% | hit rate : 36,470% 
+miss data rate: 76,577% | hit rate : 23,423%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 1
+wna = false
+split = true
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 596249
+Numero de faltas a datos: 132085
+Numero de palabras copiadas desde RAM: 2913336
+Numero de palabras copiadas a RAM: 220296
+miss instruction rate: 76,172% | hit rate : 23,828% 
+miss data rate: 60,802% | hit rate : 39,198%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = true
+sa = 32
+wna = false
+split = false
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 506057
+Numero de faltas a datos: 143267
+Numero de palabras copiadas desde RAM: 2597296
+Numero de palabras copiadas a RAM: 230552
+miss instruction rate: 64,650% | hit rate : 35,350% 
+miss data rate: 65,950% | hit rate : 34,050%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = true
+sa = 32
+wna = true
+split = false
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 496837
+Numero de faltas a datos: 159228
+Numero de palabras copiadas desde RAM: 2440752
+Numero de palabras copiadas a RAM: 266152
+miss instruction rate: 63,472% | hit rate : 36,528% 
+miss data rate: 73,297% | hit rate : 26,703%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = true
+sa = 16
+wna = false
+split = true
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 576445
+Numero de faltas a datos: 82793
+Numero de palabras copiadas desde RAM: 2636952
+Numero de palabras copiadas a RAM: 139448
+miss instruction rate: 73,642% | hit rate : 26,358% 
+miss data rate: 38,112% | hit rate : 61,888%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = true
+sa = 16
+wna = true
+split = true
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 576445
+Numero de faltas a datos: 103234
+Numero de palabras copiadas desde RAM: 2588184
+Numero de palabras copiadas a RAM: 266136
+miss instruction rate: 73,642% | hit rate : 26,358% 
+miss data rate: 47,521% | hit rate : 52,479%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 10
+wna = false
+split = false
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 572560
+Numero de faltas a datos: 161339
+Numero de palabras copiadas desde RAM: 2935596
+Numero de palabras copiadas a RAM: 244960
+miss instruction rate: 73,146% | hit rate : 26,854% 
+miss data rate: 74,269% | hit rate : 25,731%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 10
+wna = false
+split = true
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 652658
+Numero de faltas a datos: 93473
+Numero de palabras copiadas desde RAM: 2984524
+Numero de palabras copiadas a RAM: 156068
+miss instruction rate: 83,379% | hit rate : 16,621% 
+miss data rate: 43,028% | hit rate : 56,972%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 1
+wna = true
+split = false
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 492392
+Numero de faltas a datos: 179739
+Numero de palabras copiadas desde RAM: 2492708
+Numero de palabras copiadas a RAM: 266152
+miss instruction rate: 62,904% | hit rate : 37,096% 
+miss data rate: 82,739% | hit rate : 17,261%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 1
+wna = true
+split = true
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 595312
+Numero de faltas a datos: 146032
+Numero de palabras copiadas desde RAM: 2803612
+Numero de palabras copiadas a RAM: 266152
+miss instruction rate: 76,053% | hit rate : 23,947% 
+miss data rate: 67,222% | hit rate : 32,778%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 10
+wna = true
+split = false
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 570269
+Numero de faltas a datos: 173281
+Numero de palabras copiadas desde RAM: 2776148
+Numero de palabras copiadas a RAM: 266152
+miss instruction rate: 72,853% | hit rate : 27,147% 
+miss data rate: 79,766% | hit rate : 20,234%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 10
+wna = true
+split = true
+fileDir = traces/spice.trace
+Numero de referencias a instrucciones: 782764
+Numero de referencias a datos: 217237
+Numero de faltas a instrucciones: 652658
+Numero de faltas a datos: 113810
+Numero de palabras copiadas desde RAM: 2919852
+Numero de palabras copiadas a RAM: 266136
+miss instruction rate: 83,379% | hit rate : 16,621% 
+miss data rate: 52,390% | hit rate : 47,610%
+cc.trace ----------------------------------------------------------------- -e
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 1
+wna = false
+split = false
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 617336
+Numero de faltas a datos: 189233
+Numero de palabras copiadas desde RAM: 3226276
+Numero de palabras copiadas a RAM: 312688
+miss instruction rate: 81,514% | hit rate : 18,486% 
+miss data rate: 77,982% | hit rate : 22,018%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 1
+wna = false
+split = true
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 597518
+Numero de faltas a datos: 156214
+Numero de palabras copiadas desde RAM: 3014928
+Numero de palabras copiadas a RAM: 270504
+miss instruction rate: 78,897% | hit rate : 21,103% 
+miss data rate: 64,375% | hit rate : 35,625%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = true
+sa = 32
+wna = false
+split = false
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 626932
+Numero de faltas a datos: 173141
+Numero de palabras copiadas desde RAM: 3200292
+Numero de palabras copiadas a RAM: 300688
+miss instruction rate: 82,781% | hit rate : 17,219% 
+miss data rate: 71,351% | hit rate : 28,649%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = true
+sa = 32
+wna = true
+split = false
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 624527
+Numero de faltas a datos: 186463
+Numero de palabras copiadas desde RAM: 2984800
+Numero de palabras copiadas a RAM: 332088
+miss instruction rate: 82,463% | hit rate : 17,537% 
+miss data rate: 76,841% | hit rate : 23,159%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = true
+sa = 16
+wna = false
+split = true
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 666884
+Numero de faltas a datos: 92579
+Numero de palabras copiadas desde RAM: 3037852
+Numero de palabras copiadas a RAM: 167936
+miss instruction rate: 88,056% | hit rate : 11,944% 
+miss data rate: 38,152% | hit rate : 61,848%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = true
+sa = 16
+wna = true
+split = true
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 666884
+Numero de faltas a datos: 122150
+Numero de palabras copiadas desde RAM: 2954844
+Numero de palabras copiadas a RAM: 332076
+miss instruction rate: 88,056% | hit rate : 11,944% 
+miss data rate: 50,338% | hit rate : 49,662%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 10
+wna = false
+split = false
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 664808
+Numero de faltas a datos: 189731
+Numero de palabras copiadas desde RAM: 3418156
+Numero de palabras copiadas a RAM: 312424
+miss instruction rate: 87,782% | hit rate : 12,218% 
+miss data rate: 78,188% | hit rate : 21,812%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 10
+wna = false
+split = true
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 710347
+Numero de faltas a datos: 109035
+Numero de palabras copiadas desde RAM: 3277528
+Numero de palabras copiadas a RAM: 188456
+miss instruction rate: 93,795% | hit rate : 6,205% 
+miss data rate: 44,933% | hit rate : 55,067%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 1
+wna = true
+split = false
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 612558
+Numero de faltas a datos: 203319
+Numero de palabras copiadas desde RAM: 2986192
+Numero de palabras copiadas a RAM: 332120
+miss instruction rate: 80,883% | hit rate : 19,117% 
+miss data rate: 83,787% | hit rate : 16,213%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 1
+wna = true
+split = true
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 595893
+Numero de faltas a datos: 172753
+Numero de palabras copiadas desde RAM: 2833908
+Numero de palabras copiadas a RAM: 332120
+miss instruction rate: 78,682% | hit rate : 21,318% 
+miss data rate: 71,191% | hit rate : 28,809%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 10
+wna = true
+split = false
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 663673
+Numero de faltas a datos: 200656
+Numero de palabras copiadas desde RAM: 3183008
+Numero de palabras copiadas a RAM: 332104
+miss instruction rate: 87,632% | hit rate : 12,368% 
+miss data rate: 82,690% | hit rate : 17,310%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 10
+wna = true
+split = true
+fileDir = traces/cc.trace
+Numero de referencias a instrucciones: 757341
+Numero de referencias a datos: 242661
+Numero de faltas a instrucciones: 710347
+Numero de faltas a datos: 137806
+Numero de palabras copiadas desde RAM: 3169512
+Numero de palabras copiadas a RAM: 332080
+miss instruction rate: 93,795% | hit rate : 6,205% 
+miss data rate: 56,790% | hit rate : 43,210%
+cc.trace ----------------------------------------------------------------- -e
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 1
+wna = false
+split = false
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 451591
+Numero de faltas a datos: 164719
+Numero de palabras copiadas desde RAM: 2465240
+Numero de palabras copiadas a RAM: 304760
+miss instruction rate: 75,604% | hit rate : 24,396% 
+miss data rate: 70,043% | hit rate : 29,957%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 1
+wna = false
+split = true
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 427081
+Numero de faltas a datos: 97559
+Numero de palabras copiadas desde RAM: 2098560
+Numero de palabras copiadas a RAM: 224940
+miss instruction rate: 71,501% | hit rate : 28,499% 
+miss data rate: 41,485% | hit rate : 58,515%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = true
+sa = 32
+wna = false
+split = false
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 485394
+Numero de faltas a datos: 126926
+Numero de palabras copiadas desde RAM: 2449280
+Numero de palabras copiadas a RAM: 328456
+miss instruction rate: 81,263% | hit rate : 18,737% 
+miss data rate: 53,972% | hit rate : 46,028%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = true
+sa = 32
+wna = true
+split = false
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 485394
+Numero de faltas a datos: 149317
+Numero de palabras copiadas desde RAM: 2344704
+Numero de palabras copiadas a RAM: 418020
+miss instruction rate: 81,263% | hit rate : 18,737% 
+miss data rate: 63,494% | hit rate : 36,506%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = true
+sa = 16
+wna = false
+split = true
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 485394
+Numero de faltas a datos: 7489
+Numero de palabras copiadas desde RAM: 1971532
+Numero de palabras copiadas a RAM: 14948
+miss instruction rate: 81,263% | hit rate : 18,737% 
+miss data rate: 3,185% | hit rate : 96,815%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = true
+sa = 16
+wna = true
+split = true
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 485394
+Numero de faltas a datos: 33621
+Numero de palabras copiadas desde RAM: 1956576
+Numero de palabras copiadas a RAM: 417768
+miss instruction rate: 81,263% | hit rate : 18,737% 
+miss data rate: 14,297% | hit rate : 85,703%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 10
+wna = false
+split = false
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 485394
+Numero de faltas a datos: 156791
+Numero de palabras copiadas desde RAM: 2568740
+Numero de palabras copiadas a RAM: 328492
+miss instruction rate: 81,263% | hit rate : 18,737% 
+miss data rate: 66,672% | hit rate : 33,328%
+
+BlockSize = 4
+cacheSize = 32
+wt = false
+fa = false
+sa = 10
+wna = false
+split = true
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 485394
+Numero de faltas a datos: 13100
+Numero de palabras copiadas desde RAM: 1993976
+Numero de palabras copiadas a RAM: 22456
+miss instruction rate: 81,263% | hit rate : 18,737% 
+miss data rate: 5,570% | hit rate : 94,430%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 1
+wna = true
+split = false
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 446922
+Numero de faltas a datos: 185470
+Numero de palabras copiadas desde RAM: 2216028
+Numero de palabras copiadas a RAM: 418052
+miss instruction rate: 74,823% | hit rate : 25,177% 
+miss data rate: 78,867% | hit rate : 21,133%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 1
+wna = true
+split = true
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 425217
+Numero de faltas a datos: 124150
+Numero de palabras copiadas desde RAM: 2033208
+Numero de palabras copiadas a RAM: 418052
+miss instruction rate: 71,189% | hit rate : 28,811% 
+miss data rate: 52,792% | hit rate : 47,208%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 10
+wna = true
+split = false
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 485394
+Numero de faltas a datos: 179182
+Numero de palabras copiadas desde RAM: 2374604
+Numero de palabras copiadas a RAM: 418028
+miss instruction rate: 81,263% | hit rate : 18,737% 
+miss data rate: 76,193% | hit rate : 23,807%
+
+BlockSize = 4
+cacheSize = 32
+wt = true
+fa = false
+sa = 10
+wna = true
+split = true
+fileDir = traces/tex.trace
+Numero de referencias a instrucciones: 597309
+Numero de referencias a datos: 235168
+Numero de faltas a instrucciones: 485394
+Numero de faltas a datos: 33639
+Numero de palabras copiadas desde RAM: 1956648
+Numero de palabras copiadas a RAM: 417960
+miss instruction rate: 81,263% | hit rate : 18,737% 
+miss data rate: 14,304% | hit rate : 85,696%
