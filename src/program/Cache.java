@@ -20,7 +20,7 @@ public class Cache {
 	private boolean fa; //Fully associative?
 	private int sizeSet;  
 	private boolean wna; //Write-No-Allocate?
-	private boolean split; // va aqui?
+	private boolean split;
 	private int nBitTag;
 	private int nBitOffset;
 	private int nBitSet;
@@ -41,6 +41,7 @@ public class Cache {
 	
 	public void writeData(long address){
 		Stadistic.nRefDatas++;
+		if (split) address = passToDataZone(address);
 		long tag = getTag(address);
 		CacheSet cacheSet;
 		if (!containBlock(address)) {
@@ -62,6 +63,7 @@ public class Cache {
 	
 	public void readData(long address){
 		Stadistic.nRefDatas++;
+		if (split) address = passToDataZone(address);
 		long tag = getTag(address);
 		if (!containBlock(address)) {
 			Stadistic.nMissDates++;
@@ -73,7 +75,7 @@ public class Cache {
 	
 	public void readIntruction(long address) {
 		Stadistic.nRefIntruct++;
-
+		if (split) address = passToIntructZone(address);
 		long tag = getTag(address);
 		if (!containBlock(address)) {
 			Stadistic.nMissIntruction++;
@@ -170,5 +172,40 @@ public class Cache {
 		String s2 = binarySequence.substring(nBitTag+6, nBitTag+nBitSet+6);
 		String s3 = binarySequence.substring(nBitTag+nBitSet+6, binarySequence.length());
 		return s1 + " | " + s2 + " | " + s3;
+	}
+	
+	/*
+	 * Invierte el bit mas significativo de la direccion del conjunto a 0.
+	 * Si ya esta en 0 lo deja igual.
+	 * 
+	 * Solo se usan con split activo
+	 */
+	public long passToIntructZone(long address) {
+		String representation = Binary.toBinaryString(address);
+		if (!representation.subSequence(nBitTag+1, nBitTag+2).equals("0")) {
+			long setAddress = getSet(address);
+			int exponent = nBitSet;
+			setAddress = (long) (setAddress + Math.pow(2, exponent-1) - Math.pow(2, exponent));
+			String newRepresentation = representation.substring(0, nBitTag) + "0"+ Long.toBinaryString(setAddress) + representation.substring(nBitTag+nBitSet,representation.length());
+			address = Binary.valuesOf(newRepresentation);
+		}
+		return address;
+	}
+	
+	/*
+	 * Invierte el bit mas significativo de la direccion del conjunto a 1.
+	 * Si ya esta en 1 lo deja igual.
+	 * Solo se usan con split activo
+	 */
+	public long passToDataZone(long address) {
+		String representation = Binary.toBinaryString(address);
+		if (!representation.subSequence(nBitTag+1, nBitTag+2).equals("1")) {
+			long setAddress = getSet(address);
+			int exponent = nBitSet;
+			setAddress = (long) (setAddress + Math.pow(2, exponent-1));
+			String newRepresentation = representation.substring(0, nBitTag) + Long.toBinaryString(setAddress) + representation.substring(nBitTag+nBitSet,representation.length());
+			address = Binary.valuesOf(newRepresentation);
+		}
+		return address;
 	}
 }

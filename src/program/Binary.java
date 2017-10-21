@@ -14,6 +14,15 @@ public class Binary {
 		return Long.valueOf(value, radix);
 	}
 	
+	/**
+	 * Devuelve un long que representa el value.
+	 * @param value String con la cadena binaria.
+	 * @return
+	 */
+	public static long valuesOf(String value) {
+		return Long.valueOf(value, 2);
+	}
+	
 	public static String binaryRepresentation(long value){
 		//String string = Integer.toBinaryString(value);
 		String string = Binary.toBinaryString(value);
@@ -21,7 +30,12 @@ public class Binary {
 		return string;
 	}
 	
-	private static String toBinaryString(long value){
+	/**
+	 * Devuelve en un string value en binario (32bits)
+	 * @param value
+	 * @return
+	 */
+	public static String toBinaryString(long value){
 		String s = "";
 		for(int i= 31; i >= 0; i--){
 			if ((value & (1 << i)) != 0) {

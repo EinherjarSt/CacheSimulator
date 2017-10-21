@@ -11,7 +11,7 @@ public class CacheSet {
 	private boolean wna;
 	private boolean wt;
 
-	public CacheSet(int setSize, int nBitOffset, int blocksize, boolean wt, boolean wna) {
+	public CacheSet(int setSize, int blocksize, int nBitOffset, boolean wt, boolean wna) {
 		this.lines = new HashMap<Long, CacheLine>();
 		this.setSize = setSize;
 		this.blocksize = blocksize;
